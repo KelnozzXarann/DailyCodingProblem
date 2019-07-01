@@ -13,11 +13,19 @@ public class SumOfArray {
     }
 
     public Pair<Integer> getPairTo(Integer sum) throws PairInArrayNotFoundException {
+        boolean isRepeated = false;
         for(Integer i: ints){
             Integer remainder = sum - i;
             if(integerMap.contains(remainder)){
-                if(remainder.equals(i) && integerMap.size() == ints.length){
-                    continue;
+                if(remainder.equals(i)){
+                    if(integerMap.size() == ints.length) {
+                        continue;
+                    } else if (isRepeated) {
+                        return new Pair<>(i, remainder);
+                    } else {
+                        isRepeated = true;
+                        continue;
+                    }
                 }
                 return new Pair<>(i, remainder);
             }

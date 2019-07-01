@@ -98,4 +98,27 @@ All is well, no failed tests anymore. But then it started bugging me... So it's 
                 "This tests if pair can be created with one element");
     }
 ```
-New fail
+New failed test. And so the last iteration of the method is:
+
+```java
+public Pair<Integer> getPairTo(Integer sum) throws PairInArrayNotFoundException {
+        boolean isRepeated = false;
+        for(Integer i: ints){
+            Integer remainder = sum - i;
+            if(integerMap.contains(remainder)){
+                if(remainder.equals(i)){
+                    if(integerMap.size() == ints.length) {
+                        continue;
+                    } else if (isRepeated) {
+                        return new Pair<>(i, remainder);
+                    } else {
+                        isRepeated = true;
+                        continue;
+                    }
+                }
+                return new Pair<>(i, remainder);
+            }
+        }
+        throw new PairInArrayNotFoundException(ints, sum);
+    }
+```
