@@ -12,6 +12,7 @@ plugins {
 
     // Apply the application plugin to add support for building an application
     id 'application'
+    id 'idea'
 }
 
 repositories {
@@ -25,14 +26,12 @@ dependencies {
 //    implementation 'com.google.guava:guava:27.0.1-jre'
 
     // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
+    testImplementation('org.junit.jupiter:junit-jupiter:5.4.2')
 }
 
 test {
-    useJUnit()
-
-    maxHeapSize = '1G'
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
 }
-
-// Define the main class for the application
-mainClassName = 'DailyCodingProblem.App'
