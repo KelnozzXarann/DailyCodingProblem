@@ -1,6 +1,6 @@
-# Daily Coding Problem #1
+# Daily Coding Problem #
 
-I'm doing Problems from [Daily Coding Problem][dailycodingproblem.com]
+I'm doing Problems from [Daily Coding Problem](dailycodingproblem.com)
 
 ## Problem
 
