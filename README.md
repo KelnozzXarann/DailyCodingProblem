@@ -15,3 +15,21 @@ For example, the input \[3, 4, -1, 1] should give 2. The input \[1, 2, 0] should
 You can modify the input array in-place.
 
 ## My Take
+
+Right of the bat, we write two tests from the problem description.
+
+```java
+    @Test
+    void findLowestPositiveInteger() {
+        LowestPositiveInteger lpi = new LowestPositiveInteger(new Integer[]{3, 4, -1, 1});
+        assertEquals(2, lpi.findLowestPositiveInteger());
+    }
+    
+    @Test
+    void findLowestPositiveIntegerOne() {
+        LowestPositiveInteger lpi = new LowestPositiveInteger(new Integer[]{1, 2, 0});
+        assertEquals(3, lpi.findLowestPositiveInteger());
+    }
+```
+
+So for the solution. We need to look for a sorting algorithm that sorts in linear time and can do it in place.
