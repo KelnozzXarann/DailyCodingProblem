@@ -10,10 +10,10 @@ public class LowestPositiveInteger {
     public int findLowestPositiveint() {
         int lowestPositiveInt = 1;
         heapSort();
-        for (int v:array){
-            if (v == lowestPositiveInt){
+        for (int i:array){
+            if (i == lowestPositiveInt){
                 lowestPositiveInt++;
-            }else if (v > lowestPositiveInt){
+            }else if (i > lowestPositiveInt){
                 return lowestPositiveInt;
             }
         }

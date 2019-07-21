@@ -33,3 +33,21 @@ Right of the bat, we write two tests from the problem description.
 ```
 
 So for the solution. We need to look for a sorting algorithm that sorts in linear time and can do it in place.
+Best we can do is heap sort that have O(nlog(n)) time complexity. Additionally it is done in place, which means
+it doesn't use any auxiliary space so space complexity is O(1).
+
+Then the rest of the exercise is easy, you just iterate over the array like this:
+```java
+        int lowestPositiveInt = 1;
+        for (int i:array){
+            if (i == lowestPositiveInt){
+                lowestPositiveInt++;
+            }else if (i > lowestPositiveInt){
+                return lowestPositiveInt;
+            }
+        }
+```
+We're just looking for a sequential numbers and if we find that there isn't one, that is the end of our search.
+
+### Heap sort
+
