@@ -48,6 +48,3 @@ Then the rest of the exercise is easy, you just iterate over the array like this
         }
 ```
 We're just looking for a sequential numbers and if we find that there isn't one, that is the end of our search.
-
-### Heap sort
-
